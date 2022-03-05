@@ -1,0 +1,148 @@
+
+.contenedor{
+    display: grid;
+    max-width: 1400px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    'enc enc enc enc'
+    'nav nav nav nav'
+    'car car car car'
+    'mis mis vis vis'
+    'uno dos tres cuatro'
+    'con con con con'
+    'pie pie pie pie'
+    ;
+    margin: auto;
+}
+
+/*Carrusel*/
+
+.cuerpo{
+    grid-area: car;
+}
+
+/* misión*/
+
+.misi{
+    grid-area: mis;
+}
+
+.misi, .visi{
+    margin: 10px;
+    border: 1px solid black;
+    text-align: center;
+    min-height: 200px;
+}
+
+.misi p, .visi p{
+    text-align: justify;
+    padding: 10px;
+}
+
+
+/* visión*/
+
+.visi{
+    grid-area: vis;
+}
+
+/*areas*/
+
+.area1{
+    grid-area: uno;
+    background: rgb(124,124,124);
+    background: linear-gradient(0deg, rgba(124,124,124,0.5761421319796954) 0%, rgba(237,237,237,1) 100%);
+    border: 1px solid aqua;
+    text-align: center;
+    -webkit-text-stroke-width: 0.10px;
+    -webkit-text-stroke-color: black;
+    min-height: 200px;
+    display: table;
+}
+
+.area1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.area1 h1{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.area2{
+    grid-area: dos;
+    background-color: rgb(148, 148, 148);
+}
+
+.area3{
+    grid-area: tres;
+    background-color: brown;
+}
+
+.area4{
+    grid-area: cuatro;
+    background-color: rgb(158, 145, 68);
+}
+
+.area2, .area3, .area4{
+    border: 1px solid yellow;
+    color: white;
+    text-align: center;
+    min-height: 200px;
+    -webkit-text-stroke-width: 0.10px;
+    -webkit-text-stroke-color: black;
+    display: table;
+}
+
+.area2 div, .area3 div,.area4 div {
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+/*Contactos*/
+
+.pre-pie{
+    grid-area: con;
+}
+
+.con{
+    float: right;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+@media only screen and (max-width: 800px){
+    .contenedor{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: 
+        'enc'
+        'nav'
+        'car'
+        'mis'
+        'vis'
+        'uno'
+        'dos'
+        'tres' 
+        'cuatro'
+        'con'
+        'pie'
+        ;
+        margin: auto;
+    }
+    
+    .foto{
+        margin-top: 25%;
+        height: 85vh;;   
+    }
+
+    .misi, .visi, .area1, .area2, .area3, .area4{
+        height: 50vh;
+        margin: 5px;
+    }
+
+}

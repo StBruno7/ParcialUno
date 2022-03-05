@@ -1,0 +1,198 @@
+/*Encabezado*/
+.enc{
+    grid-area: enc;
+}
+
+.logoEFPEM{
+    width: 200px;
+    padding-left: 10px;
+}
+.logoUSAC{
+    width: 400px;
+    float: right;
+}
+
+/*Barra de navegación*/
+
+.encabezado{
+    grid-area: enc;
+}
+
+.logo-Efpem{
+    height: 150px;
+    margin-bottom: 5px;
+}
+
+.logo-USCA{
+    height: 150px;
+    float: right;
+}
+
+/*Menú*/
+
+.barra{
+    border-radius: 15px;
+    grid-area: nav;
+    background: rgb(153,15,16);
+    background: radial-gradient(circle, rgba(153,15,16,1) 0%, rgba(157,28,63,0.3981967787114846) 100%);
+}
+
+.ulrImg img{
+    width: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+} 
+
+.ulrImg a{
+    text-decoration:none
+}
+
+.ulrImg2 img{
+    display: none;
+}
+
+.nav-bar{
+    padding-right: 20px;
+    cursor: pointer;
+    font-size: 40px;
+    color: wheat;
+    display: none;
+}
+
+.menu, .submenu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-link{
+    display: block;
+    text-decoration: none;
+    color: wheat;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.submenu .menu-link{
+    margin-top: 10px;
+    padding-left: 10px;
+    background: rgb(153,15,16);
+    background: radial-gradient(circle, rgba(153,15,16,1) 0%, rgba(157,28,63,0.3981967787114846) 100%); 
+}
+
+.menu-link:hover{
+    border-radius: 15px;
+    background: rgb(250,15,16);
+    background: radial-gradient(circle, rgba(250,15,16,1) 0%, rgba(250,28,63,0.3981967787114846) 100%); 
+}
+
+.con-submenu{
+    position: relative;
+}
+
+.submenu{
+    text-align: center;
+    transition: all 03s;
+    position: absolute;
+    top: 33px;
+    z-index: 1000;
+    visibility: hidden;    
+}
+
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.con-submenu:hover .submenu{
+    visibility: visible;
+}
+
+.menu{
+    margin-left: 0;
+    display: flex;
+}
+
+.menu-item:hover{
+    background: rgb(153,15,16);
+    background: radial-gradient(circle, rgba(153,15,16,1) 0%, rgba(186,0,51,0.3981967787114846) 100%);
+}
+
+
+
+/*pie*/
+
+.pie{
+    text-align: center;
+    grid-area: pie;
+    background: rgb(153,15,16);
+    background: radial-gradient(circle, rgba(153,15,16,1) 0%, rgba(157,28,63,0.3981967787114846) 100%); 
+    color: wheat;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+}
+
+
+@media only screen and (max-width: 800px){
+    /* Encabezado*/
+
+    .logoEFPEM{
+        height: 15vh;
+        min-height: 80px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .logoUSAC{
+        height: 15vh;
+        min-height: 80px;    
+    }
+    .enc{
+        display: flex;
+        justify-content: space-between;
+    }
+    /*menu*/
+    .ulrImg img{
+        display: none;
+    }
+
+    .ulrImg2 img{
+        display: inline;
+        float: right;
+        width: 40px;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+    .nav-bar{
+        display: inline-block;
+        padding-left: 20px;
+    }
+    .main-nav{
+        display: flex;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .submenu{
+        position: static;
+        display: none;;
+    }
+    
+    .con-submenu:hover .submenu{
+        visibility: visible;
+        display: block;
+    }
+
+    .mostrar{
+        display: block;
+    }
+
+    .ocultar{
+        display: none;
+    }  
+
+}

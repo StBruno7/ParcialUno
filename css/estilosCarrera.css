@@ -1,0 +1,121 @@
+.contenedor{
+    display: grid;
+    max-width: 1400px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    'enc enc'
+    'nav nav'
+    'titulo titulo'
+    'uno dos'
+    'tres cuatro'
+    'pie pie'
+    ;
+    margin: auto;
+}
+
+.titulo{
+    grid-area: titulo;
+}
+
+.area1{
+    grid-area: uno;
+}
+
+.fCCI{
+    grid-area: img1;
+    width: 150px;
+    align-self: center;
+}
+
+.hea{
+    grid-area: hea;
+    text-align: center;
+    align-self: center;
+    
+}
+
+.tex{
+    grid-area: tex;
+    text-align: center;
+    align-self: center;
+}
+
+.boton{
+    display: table;
+    grid-area: boton;
+    background-color: brown;
+    border-radius: 10px;
+    width: 70%;
+    min-height: 50px;
+    text-align: center;
+    justify-self: center;
+    margin-bottom: 5px;
+}
+
+.boton a{
+    display: table-cell;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 20px;
+    color: white;
+    -webkit-text-stroke: 0.30px;
+}
+
+.area2{
+    grid-area: dos;
+}
+
+.area3{
+    grid-area: tres;
+}
+
+.area4{
+    grid-area: cuatro;
+}
+
+.area1, .area2, .area3, .area4{
+    display: grid;
+    justify-self: center;
+    border-radius: 10px;
+    grid-template-areas: 
+    'img1 hea'
+    'img1 tex'
+    'img1 boton'
+    ;
+    align-self: center;
+}
+
+.area1, .area3{
+    margin: 15px 15px 15px 30px;
+    border: 1px solid rgb(2, 155, 155);
+}
+
+.area2, .area4{
+    margin: 15px 30px 15px 15px;
+    border: 1px solid rgb(2, 155, 155);
+}
+
+@media only screen and (max-width: 800px){
+
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        'enc'
+        'nav'
+        'titulo'
+        'uno'
+        'dos'
+        'tres'
+        'cuatro'
+        'pie'
+        ;
+        margin: auto;
+    }
+
+    .area1, .area2, .area3, .area4{
+        margin: 10px;
+    }
+
+
+}

@@ -1,0 +1,116 @@
+.contenedor{
+    display: grid;
+    max-width: 1400px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    'enc enc'
+    'nav nav'
+    'titulo titulo'
+    'uno dos'
+    'tres cuatro'
+    'pie pie'
+    ;
+    margin: auto;
+}
+
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+}
+
+.area1{
+    grid-area: uno;
+}
+
+.area2{
+    grid-area: dos;
+}
+
+.area3{
+    grid-area: tres;
+}
+
+.area4{
+    grid-area: cuatro;
+}
+
+.area1 div, .area2 div, .area3 div, .area4 div{
+    text-align: right;
+}
+
+.area1, .area2, .area3, .area4{
+    margin: 20px;;
+    border: 1px solid orange;
+    text-align: center;
+}
+
+.fNotica{
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,240,149,0.5362694300518135) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 255, 0.589);
+}
+
+figure{
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+figcaption{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(173, 1, 1);
+    padding: 5%;
+    width: 50%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-left: 21%;
+}
+
+figcaption:hover{
+    background-color: maroon;
+}
+    
+    
+figcaption a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    -webkit-text-stroke: 0.10px;
+}
+    
+    
+.hea{
+    text-align: left;
+    align-self: center; 
+}
+    
+    
+.tex{
+    font-size: 20px;
+    text-align: right;
+    align-self: center;
+}
+
+@media only screen and (max-width: 800px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        'enc'
+        'nav'
+        'titulo'
+        'uno'
+        'dos'
+        'tres'
+        'cuatro'
+        'pie'
+        ;
+        margin: auto;
+    }
+}
